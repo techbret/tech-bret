@@ -97,7 +97,7 @@ export default function Navbar(props) {
                   {/* Profile dropdown */}
                   <Menu as="div" className="ml-3 relative hidden">
                     <div>
-                      <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                      <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white hidden">
                         <span className="sr-only">Open user menu</span>
                         <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
                       </Menu.Button>

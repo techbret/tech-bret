@@ -2,6 +2,7 @@ import { ChevronRightIcon } from '@heroicons/react/solid'
 import Already from '../components/Already'
 import DevPricing from '../components/DevPricing'
 import Pricing from '../components/Pricing'
+import SEO from '../components/SEO'
 import Special from '../components/Special'
 
 const incentives = [
@@ -261,6 +262,8 @@ export default function Home() {
     <Special />
     
     <Pricing />
+
+    <SEO />
     
 
 
