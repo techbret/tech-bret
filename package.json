@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.2"
+    "@tailwindcss/forms": "^0.5.2",
+    "netlify-cli": "^10.10.0"
   }
 }
