@@ -65,7 +65,7 @@ export default function Pricing() {
                             className="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-red-600 hover:bg-gray-50"
                             aria-describedby="tier-hobby"
                           >
-                            Start your trial
+                            Get Started
                           </a>
                         </div>
                       </div>
@@ -118,7 +118,7 @@ export default function Pricing() {
                           className="block w-full text-center rounded-lg border border-transparent bg-red-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-red-700"
                           aria-describedby="tier-growth"
                         >
-                          Start your trial
+                          Get Started
                         </a>
                       </div>
                     </div>
@@ -160,7 +160,7 @@ export default function Pricing() {
                             className="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-red-600 hover:bg-gray-50"
                             aria-describedby="tier-scale"
                           >
-                            Start your trial
+                            Get Started
                           </a>
                         </div>
                       </div>
