@@ -5,10 +5,10 @@ import { BellIcon, LoginIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { PlusSmIcon } from '@heroicons/react/solid'
 
 const user = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
+  name: 'Bret Johnson',
+  email: 'bret@techbret.com',
   imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://www.facebook.com/photo/?fbid=104124719045367&set=a.104111579046681',
 }
 const navigation = [
   { name: 'Home', href: '/', current: false },
