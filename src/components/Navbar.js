@@ -14,6 +14,7 @@ const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Team', href: '#', current: false },
   { name: 'Projects', href: '#', current: false },
+  { name: 'Pricing', href: '/pricing', current: false },
   { name: 'My Resume', href: '/resume', current: false },
 ]
 const userNavigation = [

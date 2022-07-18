@@ -1,7 +1,7 @@
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import Already from '../components/Already'
 import DevPricing from '../components/DevPricing'
-import Pricing from '../components/Pricing'
+import ContentPricing from '../components/ContentPricing'
 import SEO from '../components/SEO'
 import Special from '../components/Special'
 
@@ -261,7 +261,7 @@ export default function Home() {
     </div>
     <Special />
     
-    <Pricing />
+    <ContentPricing />
 
     <SEO />
     

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Logo from './assets/images/logo-main.svg'
 import Home from './pages/Home';
 import Resume from './pages/Resume';
+import Pricing from './pages/Pricing';
 import {
   Routes,
   Route
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/pricing" element={<Pricing />} />
       </Routes>
       <Footer />    
     </div>

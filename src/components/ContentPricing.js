@@ -9,7 +9,7 @@ const growthFeatures = [
   'Performance Optimization',
 ]
 
-export default function Pricing() {
+export default function ContentPricing() {
   return (
     <div className="bg-zinc-800">
       <div className="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
@@ -19,7 +19,7 @@ export default function Pricing() {
             Already Have a Website?
           </p>
           <p className="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">
-            Hire me to <span className='text-red-600'>maintain your website</span>. We all know keeping a website up-to-date can be time consuming and take time away from your business. I offer three content management services for all sizes and all companies.
+            Hire me to <span className='text-red-400 font-extrabold'>maintain your website</span>. We all know keeping a website up-to-date can be time consuming and take time away from your business. I offer three content management services for all sizes and all companies.
           </p>
         </div>
       </div>
@@ -35,7 +35,7 @@ export default function Pricing() {
                     <div className="bg-white px-6 py-10">
                       <div>
                         <h3 className="text-center text-2xl font-medium text-gray-900" id="tier-hobby">
-                          Hobby
+                          Small Business
                         </h3>
                         <div className="mt-4 flex items-center justify-center">
                           <span className="px-3 flex items-start text-6xl tracking-tight text-gray-900">
