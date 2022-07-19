@@ -7,6 +7,9 @@ const growthFeatures = [
   'Review and Perform Software/Plugin Updates Daily',
   'Uptime & Security Monitoring',
   'Performance Optimization',
+  'Review and Perform Software/Plugin Updates Daily',
+  'Uptime & Security Monitoring',
+  'Performance Optimization',
 ]
 
 export default function ContentPricing() {
@@ -35,7 +38,7 @@ export default function ContentPricing() {
                     <div className="bg-white px-6 py-10">
                       <div>
                         <h3 className="text-center text-2xl font-medium text-gray-900" id="tier-hobby">
-                          Small Business
+                          Hobby
                         </h3>
                         <div className="mt-4 flex items-center justify-center">
                           <span className="px-3 flex items-start text-6xl tracking-tight text-gray-900">
