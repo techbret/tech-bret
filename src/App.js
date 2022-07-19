@@ -9,6 +9,8 @@ import {
   Route
 } from 'react-router-dom';
 import Footer from './components/Footer';
+import { Dashboard } from './userPages/Dasboard';
+import Contact from './pages/Contact';
 
 
 
@@ -20,6 +22,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />    
     </div>

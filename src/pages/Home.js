@@ -1,24 +1,27 @@
 import { ChevronRightIcon } from '@heroicons/react/solid'
-import Already from '../components/Already'
-import DevPricing from '../components/DevPricing'
+import LightBulb  from '../assets/icons/light-bulb.svg'
+import Business from '../assets/icons/business.svg'
+import Success from '../assets/icons/success.svg'
 import ContentPricing from '../components/ContentPricing'
 import SEO from '../components/SEO'
 import Special from '../components/Special'
 
+
+
 const incentives = [
     {
       name: 'Idea and Design Strategy',
-      imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-shipping-simple.svg',
+      imageSrc: LightBulb,
       description: "I will connect with you with your preferred method so that I can better understand your requirements and business needs. I then start the creative design journey. Once I understand the idea, I will develop the UX strategy.",
     },
     {
       name: 'Development',
-      imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-warranty-simple.svg',
+      imageSrc: Business,
       description: "I will then work with you in an iterative process ensuring your feedback is incorporated and we develop a great website together. If you prefer to stay more hands off (I know you're busy) I will make sure to deliver a quality product.",
     },
     {
       name: 'Success',
-      imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-exchange-simple.svg',
+      imageSrc: Success,
       description:
         "I continue to improve your site through revisions to ensure a successful roll out. I believe your success is mine as well. Once you approve of the final design I will push it to your production line so that it goes live",
     },
