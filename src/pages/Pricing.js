@@ -19,38 +19,38 @@ const includedFeatures = [
   const tiers = [
     {
       name: 'Basic',
-      href: '#',
+      href: '/basic',
       priceMonthly: 299,
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+      description: 'Suitable for Small Startups',
       features: [
-        'Pariatur quod similique',
-        'Sapiente libero doloribus modi nostrum',
-        'Vel ipsa esse repudiandae excepturi',
-        'Itaque cupiditate adipisci quibusdam',
+        '3 Pages 100% Custom Website Design',
+        'Complete Web Development',
+        'Unlimited Revisions',
+        'Lead Capturing Form',
       ],
     },
     {
       name: 'Startup',
-      href: '#',
+      href: '/standard-deal',
       priceMonthly: 499,
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+      description: 'Suitable for Small-Med Startups',
       features: [
-        'Pariatur quod similique',
-        'Sapiente libero doloribus modi nostrum',
-        'Vel ipsa esse repudiandae excepturi',
-        'Itaque cupiditate adipisci quibusdam',
+        '6 Pages 100% Custom Website Design',
+        'Complete Website Development',
+        'Unlimited Revisions',
+        '6 Royalty-Free Images',
       ],
     },
     {
         name: 'Pro',
-        href: '#',
+        href: '/pro',
         priceMonthly: 799,
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+        description: 'Suitable for Small Businesses',
         features: [
-          'Pariatur quod similique',
-          'Sapiente libero doloribus modi nostrum',
-          'Vel ipsa esse repudiandae excepturi',
-          'Itaque cupiditate adipisci quibusdam',
+          '10 Pages 100% Custom Website Design',
+          'Complete Development & Deployment',
+          'Unlimited Revisions',
+          '8 Royalty-Free Images',
         ],
       },
   ]
@@ -105,7 +105,7 @@ export default function Pricing() {
                   <span className="ml-3 text-xl font-medium text-gray-500">USD</span>
                 </div>
                 <p className="mt-4 text-sm">
-                  <a href="#" className="font-medium text-gray-500 underline">
+                  <a href="#pricing" className="font-medium text-gray-500 underline">
                     Check out our other No Commitment Pricing Models
                   </a>
                 </p>
@@ -120,8 +120,8 @@ export default function Pricing() {
                   </div>
                 </div>
                 <div className="mt-4 text-sm">
-                  <a href="#" className="font-medium text-gray-900">
-                    Get a free sample <span className="font-normal text-gray-500">(20MB)</span>
+                  <a href="#save" className="font-medium text-gray-900">
+                    Save Money <span className="font-normal text-gray-500">(Content Management Pricing)</span>
                   </a>
                 </div>
               </div>
@@ -132,7 +132,7 @@ export default function Pricing() {
     </div>
       <div className="px-4 sm:px-6 lg:px-8 lg:pb-8 ">
         <div className="text-center">
-          <h2 className="text-lg leading-6 font-semibold text-red-600 uppercase tracking-wider">Save Money on Set Up Costs</h2>
+          <h2 className="text-lg leading-6 font-semibold text-red-600 uppercase tracking-wider" id="save">Save Money on Set Up Costs</h2>
           <p className="mt-2 text-3xl font-extrabold text-zinc-800 sm:text-4xl lg:text-5xl">
             Save money by letting me handle your monthly upkeep
           </p>
@@ -143,7 +143,7 @@ export default function Pricing() {
       </div>
       <Special />
       <div className="bg-zinc-800">
-      <div className="pt-12 sm:pt-16 lg:pt-24">
+      <div className="pt-12 sm:pt-16 lg:pt-24" id="pricing">
         <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto space-y-2 lg:max-w-none">
             <h2 className="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider">Pricing</h2>
@@ -176,27 +176,27 @@ export default function Pricing() {
                       ${tier.priceMonthly}
                       <span className="ml-1 text-2xl font-medium text-gray-500">/setup</span>
                     </div>
-                    <p className="mt-5 text-lg text-gray-500">{tier.description}</p>
+                    <p className="mt-5 text-md text-zinc-500">{tier.description}</p>
                   </div>
-                  <div className="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6">
-                    <ul role="list" className="space-y-4">
+                  <div className="flex-1 flex flex-col justify-between px-6 pt-2 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-2">
+                    <ul className="space-y-1">
                       {tier.features.map((feature) => (
                         <li key={feature} className="flex items-start">
                           <div className="flex-shrink-0">
-                            <CheckIcon className="h-6 w-6 text-green-500" aria-hidden="true" />
+                            <CheckIcon className="h-6 w-6 text-red-600" aria-hidden="true" />
                           </div>
                           <p className="ml-3 text-base text-gray-700">{feature}</p>
                         </li>
                       ))}
                     </ul>
                     <div className="rounded-md shadow">
-                      <a
-                        href={tier.href}
+                      <Link
+                        to={tier.href}
                         className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-900"
                         aria-describedby="tier-standard"
                       >
-                        Get started
-                      </a>
+                        Find Out More
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -204,7 +204,7 @@ export default function Pricing() {
             </div>
           </div>
         </div>
-        <div className="mt-4 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-5">
+        <div className="mt-4 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-5 text-center">
           <div className="max-w-md mx-auto lg:max-w-5xl">
             <div className="rounded-lg bg-gray-100 px-6 py-8 sm:p-10 lg:flex lg:items-center">
               <div className="flex-1">
@@ -214,16 +214,8 @@ export default function Pricing() {
                   </h3>
                 </div>
                 <div className="mt-4 text-lg text-zinc-600">
-                  Get full access to any featured package with a discount of <span className="font-semibold text-zinc-900">$300 off</span> when you sign up for any of my monthly content management services.
+                  Get full access to any featured package with a discount of <span className="font-semibold text-zinc-900">$200 off</span> when you sign up for any of my monthly content management services.
                 </div>
-              </div>
-              <div className="mt-6 rounded-md shadow lg:mt-0 lg:ml-10 lg:flex-shrink-0">
-                <a
-                  href="#"
-                  className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-zinc-900 bg-white hover:bg-zinc-50"
-                >
-                  Apply Discount
-                </a>
               </div>
             </div>
           </div>
@@ -241,20 +233,12 @@ export default function Pricing() {
         </h2>
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
-            <a
-              href="#"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-zinc-800 hover:bg-zinc-900"
             >
               Message Me
-            </a>
-          </div>
-          <div className="ml-3 inline-flex rounded-md shadow">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-zinc-50"
-            >
-              Learn More
-            </a>
+            </Link>
           </div>
         </div>
       </div>

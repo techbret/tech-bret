@@ -1,5 +1,4 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { CalendarIcon, CheckIcon, DatabaseIcon, DesktopComputerIcon, DeviceMobileIcon, PlusIcon, UsersIcon, ViewBoardsIcon, ViewListIcon } from '@heroicons/react/outline';
+import { CalendarIcon, CheckIcon, DatabaseIcon, DesktopComputerIcon, DeviceMobileIcon, PlusIcon } from '@heroicons/react/outline';
 import { Link } from 'react-router-dom'
 
 const features = [
@@ -89,7 +88,7 @@ export default function Special() {
                 </span>
               </p>
             </div>
-            <ul role="list" className="rounded overflow-hidden grid gap-px sm:grid-cols-2">
+            <ul className="rounded overflow-hidden grid gap-px sm:grid-cols-2">
               {checklist.map((item) => (
                 <li
                   key={item}
