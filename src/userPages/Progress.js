@@ -1,6 +1,5 @@
 import { Authenticator } from "@aws-amplify/ui-react";
 import '@aws-amplify/ui-react/styles.css'
-import userEvent from "@testing-library/user-event";
 
 export const Progress = () => {
     return (

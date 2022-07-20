@@ -3,6 +3,7 @@ import { CheckCircleIcon } from '@heroicons/react/solid'
 import ContentPricing from '../components/ContentPricing'
 import { CheckIcon } from '@heroicons/react/outline'
 import SEO from '../components/SEO'
+import { Link } from 'react-router-dom'
 import Special from '../components/Special'
 
 
@@ -110,12 +111,12 @@ export default function Pricing() {
                 </p>
                 <div className="mt-6">
                   <div className="rounded-md shadow">
-                    <a
-                      href="#"
+                    <Link
+                      to="/standard-deal"
                       className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-zinc-800 hover:bg-zinc-900"
                     >
                       Get Started
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="mt-4 text-sm">
