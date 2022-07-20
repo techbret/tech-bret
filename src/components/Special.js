@@ -1,5 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { CalendarIcon, CheckIcon, DatabaseIcon, DesktopComputerIcon, DeviceMobileIcon, PlusIcon, UsersIcon, ViewBoardsIcon, ViewListIcon } from '@heroicons/react/outline'
+import { CalendarIcon, CheckIcon, DatabaseIcon, DesktopComputerIcon, DeviceMobileIcon, PlusIcon, UsersIcon, ViewBoardsIcon, ViewListIcon } from '@heroicons/react/outline';
+import { Link } from 'react-router-dom'
 
 const features = [
   {
@@ -99,15 +100,15 @@ export default function Special() {
                 </li>
               ))}
             </ul>
-            <a
-              href="#"
+            <Link
+              to="/monthly-special"
               className="bg-white border border-transparent rounded-md w-full px-8 py-4 flex items-center justify-center text-lg leading-6 font-medium text-red-600 hover:bg-red-50 md:px-10"
             >
               Get started today
-            </a>
-            <a href="#" className="block text-center text-base font-medium text-white hover:text-white">
+            </Link>
+            <Link to="/standard-deal" className="block text-center text-base font-medium text-white hover:text-white">
               Just want a website built?
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,12 +1,12 @@
 import { CheckIcon } from '@heroicons/react/outline'
 
 const hobbyFeatures = ['1-on-1 meetings once a month', 'Client Requested Content Updates', 'Daily  Off-Site Backup of Full Website']
-const scaleFeatures = ['1-on-1 meetings twice a month', 'E-Commerce Sites Supported', 'E-Commerce Sites Supported']
+const scaleFeatures = ['1-on-1 meetings twice a month', 'E-Commerce Sites ', 'E-Commerce']
 const growthFeatures = [
-  '1-on-1 meetings once a week',
-  'Review and Perform Software/Plugin Updates Daily',
-  'Uptime & Security Monitoring',
-  'Performance Optimization',
+  '1',
+  '2',
+  '3',
+  '4',
   'Review and Perform Software/Plugin Updates Daily',
   'Uptime & Security Monitoring',
   'Performance Optimization',
