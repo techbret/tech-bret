@@ -1,4 +1,5 @@
 import { CheckCircleIcon } from '@heroicons/react/solid'
+import { Link } from 'react-router-dom'
 
 const includedFeatures = [
   '150 keyphrases optimized',
@@ -37,7 +38,7 @@ export default function SEO() {
                     </h4>
                     <div className="flex-1 border-t-2 border-gray-200" />
                   </div>
-                  <ul role="list" className="mt-8 space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5">
+                  <ul className="mt-8 space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5">
                     {includedFeatures.map((feature) => (
                       <li key={feature} className="flex items-start lg:col-span-1">
                         <div className="flex-shrink-0">
@@ -56,24 +57,24 @@ export default function SEO() {
                   <span className="ml-3 text-xl font-medium text-gray-500">/per month</span>
                 </div>
                 <p className="mt-4 text-sm">
-                  <a href="#" className="font-medium text-gray-500 underline">
+                  <Link to="seo-package" className="font-medium text-gray-500 underline">
                     Learn about our membership policy
-                  </a>
+                  </Link>
                 </p>
                 <div className="mt-6">
                   <div className="rounded-md shadow">
-                    <a
-                      href="#"
+                    <Link
+                      to="/seo-package"
                       className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-800"
                     >
                       Get Access
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="mt-4 text-sm">
-                  <a href="#" className="font-medium text-gray-900">
+                  <Link to="/projects" className="font-medium text-gray-900">
                     See why my SEO service works <span className="font-normal text-gray-500">(67% increase)</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

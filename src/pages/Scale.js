@@ -3,41 +3,30 @@ import { CheckCircle } from 'heroicons-react'
 import CreateContact from '../modules/createContact';
 
 const packageFeatures = [
-    '6 Pages 100% Custom Website',
-    'Complete Website Development',
-    'Unlimited Revisions',
-    '6 Royalty-Free Stock Images',
-    'Logo Design',
-    'Lead Capturing Form',
-    'Complete W3C Certified HTML',
-    'FREE Icon Design',
-    'FREE Google Friendly Sitemap',
-    'Complete Deployment',
-    'Mobile Responsive',
-    'Content Management',
+    '24/7 Priority Support',
+    'Unlimited 24/7 Website Edits',
+    '4 Hours development & designing',
+    'Development & designing',
+    'Speed and Performance optimization',
+    'Malware Scans and Investigations',
+    'Google Site Map and Local Listing Submission',
+    'Customizations',
+    'Firewall Setup and DDoS protection',
+    'Google Business Maintenance',
+    'My SEO Package',
+    'Ecommerce Customizable',
+    'Email Account Administrator',
     '100% Ownership Rights',
     '100% Satisfaction Guarantee',
-    'Money-Back Guarantee'
+    'Cancel Anytime'
 
 ]
 
-const monthlyFeatures = [
-    'Daily Website Management',
-    'Hosting Included',
-    'Google Website Management',
-    'Professional reports',
-    'Domain Name with Certification',
-    'Unmetered SSD',
-    '24/7 Customer Service',
-    '1-1 Monthly Dev Meetings',
-    'Revisions',
-]
 
-const deal = "199Deal"
 
-export default function WebPackage() {
-    
+const deal = "Scale"
 
+export default function Scale() {    
 
     return (
         <div className="bg-zinc-800">
@@ -45,12 +34,10 @@ export default function WebPackage() {
             <div>
                 <div className="mx-auto text-center py-16  sm:py-20 sm:px-6 ">
                     <h2 className="text-6xl font-extrabold text-white">
-                        <span className="block mb-4">$199 <span className='text-red-600'>Summer Deal</span></span>
+                        <span className="block mb-4">$599/month <span className='text-red-600'>Scale Package</span></span>
                     </h2>
-                    <h2 className="text-xl font-bold text-white block">New Website with my Content Management Service for only $79/month</h2>
-                    <p className="mt-4 text-lg leading-6 text-zinc-200">
-                        This deal won't last long! Normally this package goes for $499, thats <span className='font-extrabold text-white text-2xl'>$200 OFF</span> my normal price!
-                    </p>
+                    <p className="mt-4 text-lg leading-6 text-zinc-200">Content Management suitable for small startups to medium sized businesses</p>
+                    
                 </div>
             </div>
             <div className="max-w-7xl mx-auto">
@@ -173,17 +160,7 @@ export default function WebPackage() {
                             </div>
                             <br></br>
                             <div className='rounded-lg border-4 border-white border-solid bg-zinc-600 mt-3'>
-                                <h3 className="text-xl font-extrabold ium text-white mt-6 text-center">$79/month Content Management</h3>
-
-                                <div className="flex-1 flex flex-col justify-between border-zinc-100  p-8">
-                                    <ul className="space-y-2">
-                                        {monthlyFeatures.map((feature) => (
-                                            <li key={feature} className="flex items-start">
-                                                <p className="text-base font-medium text-white">{feature}</p>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
+                                <h3 className="text-xl font-extrabold ium text-white mt-6 mb-6 text-center">$200 off any Website Build Package</h3>
 
                             </div>
 

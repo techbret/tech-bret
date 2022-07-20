@@ -3,41 +3,28 @@ import { CheckCircle } from 'heroicons-react'
 import CreateContact from '../modules/createContact';
 
 const packageFeatures = [
-    '6 Pages 100% Custom Website',
-    'Complete Website Development',
-    'Unlimited Revisions',
-    '6 Royalty-Free Stock Images',
-    'Logo Design',
-    'Lead Capturing Form',
-    'Complete W3C Certified HTML',
-    'FREE Icon Design',
-    'FREE Google Friendly Sitemap',
-    'Complete Deployment',
-    'Mobile Responsive',
-    'Content Management',
-    '100% Ownership Rights',
-    '100% Satisfaction Guarantee',
-    'Money-Back Guarantee'
-
-]
-
-const monthlyFeatures = [
-    'Daily Website Management',
-    'Hosting Included',
-    'Google Website Management',
+    '24/7 Priority Support',
+    'Extension and Theme update',
+    'Hosting',
+    'Speed and Performance optimization',
+    'Extension Installation',
+    'Lead Capturing Forms',
     'Professional reports',
     'Domain Name with Certification',
     'Unmetered SSD',
-    '24/7 Customer Service',
-    '1-1 Monthly Dev Meetings',
-    'Revisions',
+    'Email Account Administrator',
+    '100% Ownership Rights',
+    '100% Satisfaction Guarantee',
+    'Cancel Anytime'
+
 ]
 
-const deal = "199Deal"
 
-export default function WebPackage() {
-    
 
+const deal = "Hobby"
+
+export default function Hobby() {
+   
 
     return (
         <div className="bg-zinc-800">
@@ -45,12 +32,10 @@ export default function WebPackage() {
             <div>
                 <div className="mx-auto text-center py-16  sm:py-20 sm:px-6 ">
                     <h2 className="text-6xl font-extrabold text-white">
-                        <span className="block mb-4">$199 <span className='text-red-600'>Summer Deal</span></span>
+                        <span className="block mb-4">$79/month <span className='text-red-600'>Hobby Package</span></span>
                     </h2>
-                    <h2 className="text-xl font-bold text-white block">New Website with my Content Management Service for only $79/month</h2>
-                    <p className="mt-4 text-lg leading-6 text-zinc-200">
-                        This deal won't last long! Normally this package goes for $499, thats <span className='font-extrabold text-white text-2xl'>$200 OFF</span> my normal price!
-                    </p>
+                    <p className="mt-4 text-lg leading-6 text-zinc-200">Content Management suitable for small startups to medium sized businesses</p>
+                    
                 </div>
             </div>
             <div className="max-w-7xl mx-auto">
@@ -173,17 +158,7 @@ export default function WebPackage() {
                             </div>
                             <br></br>
                             <div className='rounded-lg border-4 border-white border-solid bg-zinc-600 mt-3'>
-                                <h3 className="text-xl font-extrabold ium text-white mt-6 text-center">$79/month Content Management</h3>
-
-                                <div className="flex-1 flex flex-col justify-between border-zinc-100  p-8">
-                                    <ul className="space-y-2">
-                                        {monthlyFeatures.map((feature) => (
-                                            <li key={feature} className="flex items-start">
-                                                <p className="text-base font-medium text-white">{feature}</p>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
+                                <h3 className="text-xl font-extrabold ium text-white mt-6 mb-6 text-center">$200 off any Website Build Package</h3>
 
                             </div>
 
@@ -269,7 +244,7 @@ export default function WebPackage() {
                         <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
                             <h3 className="text-5xl font-extrabold text-red-600 text-center">Get Started On Your Project</h3>
                             <h3 className="text-2xl font-semibold text-zinc-900 text-center">No Money Down Today! Fill out this form I can begin to put together your deal!</h3>
-                           <CreateContact name={deal} />
+                            <CreateContact name={deal} />
                         </div>
                     </div>
                 </div>

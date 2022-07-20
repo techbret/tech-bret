@@ -1,5 +1,4 @@
 import { DownloadIcon } from '@heroicons/react/outline';
-import BretPic from '../assets/images/bretPic.png';
 import BretsResume from '../assets/documents/Bret_Johnson_Resume.pdf'
 
 const stats = [
@@ -71,7 +70,7 @@ export default function Resume() {
                             <div>
                             <h2 className="text-white text-xs font-medium uppercase tracking-wide mt-6 mb-6">Languages</h2>
 
-                                <ul role="list" className="grid grid-cols-1 gap-5">
+                                <ul className="grid grid-cols-1 gap-5">
                                     {languages.map((project) => (
                                         <li key={project.name} className="col-span-1 flex shadow-sm rounded-md">
                                             <div
@@ -94,7 +93,7 @@ export default function Resume() {
                                     ))}
                                 </ul>
                                 <h2 className="text-white text-xs font-medium uppercase tracking-wide mt-6 mb-6">Database/Server Management</h2>
-                                <ul role="list" className="grid grid-cols-1 gap-5">
+                                <ul className="grid grid-cols-1 gap-5">
                                     {servers.map((project) => (
                                         <li key={project.name} className="col-span-1 flex shadow-sm rounded-md">
                                             <div
@@ -117,7 +116,7 @@ export default function Resume() {
                                     ))}
                                 </ul>
                                 <h2 className="text-white text-xs font-medium uppercase tracking-wide mt-6 mb-6">Frameworks</h2>
-                                <ul role="list" className="grid grid-cols-1 gap-5">
+                                <ul className="grid grid-cols-1 gap-5">
                                     {frameworks.map((project) => (
                                         <li key={project.name} className="col-span-1 flex shadow-sm rounded-md">
                                             <div
@@ -147,8 +146,9 @@ export default function Resume() {
                         </nav>
                     </div>
                     <main className="lg:col-span-9 xl:col-span-6">
+                        
                     <h2 className="text-white text-xs text-center font-medium uppercase tracking-wide mt-6 mb-6">About Me and Job History</h2>
-
+                    
                         <div className="relative py-10 bg-white overflow-hidden rounded-lg mb-6">
                             <div className="relative px-4 sm:px-6 lg:px-8">
                                 <div className="text-lg max-w-prose mx-auto">
@@ -165,6 +165,7 @@ export default function Resume() {
                                     </p>
                                 </div>
                                 <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+                                
 
                                     <h1 className='block text-2xl text-center text-zinc-900 font-bold tracking-wide'>J&L Group</h1>
                                     <h2 className='block text-sm text-center text-red-600 font-semibold tracking-wide uppercase'>Senior Web Developer</h2>
@@ -207,37 +208,7 @@ export default function Resume() {
                                             data from internal and external sources, and applied advanced analytical methods to assess factors impacting
                                             the overall security of the nation</li>
                                     </ul>
-                                    <blockquote>
-                                        <p>
-                                            Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
-                                            pellentesque. Blandit amet, sed aenean erat arcu morbi.
-                                        </p>
-                                    </blockquote>
-                                    <p>
-                                        Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae
-                                        sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit.
-                                    </p>
-                                    <figure>
-                                        <img
-                                            className="w-full rounded-lg"
-                                            src={BretPic}
-                                            alt=""
-                                            width={1310}
-                                            height={873}
-                                        />
-                                        <figcaption>Sagittis scelerisque nulla cursus in enim consectetur quam.</figcaption>
-                                    </figure>
-                                    <h2>Everything you need to get up and running</h2>
-                                    <p>
-                                        Purus morbi dignissim senectus mattis <a href="#">adipiscing</a>. Amet, massa quam varius orci dapibus
-                                        volutpat cras. In amet eu ridiculus leo sodales cursus tristique. Tincidunt sed tempus ut viverra ridiculus
-                                        non molestie. Gravida quis fringilla amet eget dui tempor dignissim. Facilisis auctor venenatis varius nunc,
-                                        congue erat ac. Cras fermentum convallis quam.
-                                    </p>
-                                    <p>
-                                        Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae
-                                        sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit.
-                                    </p>
+                                   
                                 </div>
                             </div>
                         </div>

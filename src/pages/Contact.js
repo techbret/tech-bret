@@ -2,15 +2,12 @@ import { useState } from 'react'
 import { Switch } from '@headlessui/react'
 import { addDoc, collection } from 'firebase/firestore'
 import { db } from '../firebase';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
-
-
 
 export default function Contact() {
   const [agreed, setAgreed] = useState(false);
@@ -53,8 +50,6 @@ export default function Contact() {
   }
   }
 
-
-
   return (
     <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
       <div className="relative max-w-xl mx-auto">
@@ -66,7 +61,6 @@ export default function Contact() {
           viewBox="0 0 404 404"
           aria-hidden="true"
         >
-          >
           <defs>
             <pattern
               id="85737c0e-0916-41d7-917f-596dc7edfa27"
@@ -105,10 +99,9 @@ export default function Contact() {
         </svg>
         <div className="text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-red-600 sm:text-4xl">Contact <span className='text-zinc-800' >TechBret</span></h2>
-          <p className="mt-4 text-lg leading-6 text-gray-500">
-            Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus
-            arcu.
-          </p>
+          <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            If your inquiry is urgent, please call me at <span className='text-red-600 font-bold'>719-318-4101</span> or email me directly at <span className='text-red-600 font-bold'>bret@techbret.com</span>. 
+            </p>
         </div>
         <div className="mt-12">
           <form className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"  id="my_form">
@@ -211,7 +204,6 @@ export default function Contact() {
                   name="message"
                   rows={4}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-red-500 focus:border-red-500 border border-gray-300 rounded-md"
-
                 />
               </div>
             </div>
@@ -239,13 +231,13 @@ export default function Contact() {
                 <div className="ml-3">
                   <p className="text-base text-gray-500">
                     By selecting this, you agree to the{' '}
-                    <a href="#" className="font-medium text-gray-700 underline">
+                    <Link to="/privacy" className="font-medium text-gray-700 underline">
                       Privacy Policy
-                    </a>{' '}
+                    </Link>{' '}
                     and{' '}
-                    <a href="#" className="font-medium text-gray-700 underline">
+                    <Link to="/cookie" className="font-medium text-gray-700 underline">
                       Cookie Policy
-                    </a>
+                    </Link>
                     .
                   </p>
                 </div>

@@ -1,5 +1,6 @@
-import { CheckIcon, MailIcon, PhoneIcon } from '@heroicons/react/outline'
+import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import { CheckCircle } from 'heroicons-react'
+import CreateContact from '../modules/createContact'
 
 const packageFeatures = [
     '6 Pages 100% Custom Website',
@@ -32,6 +33,7 @@ const monthlyFeatures = [
     'Revisions',
 ]
 
+
 export default function StandardPackage() {
     return (
         <div className="bg-zinc-800">
@@ -43,7 +45,7 @@ export default function StandardPackage() {
         </h2>
         <h2 className="text-xl font-bold text-white block">Content Management Starting for only $79/month <span className='text-sm'>Optional</span></h2>
         <p className="mt-4 text-lg leading-6 text-zinc-200">
-          This deal won't last long! Normally this package goes for $499, thats <span className='font-extrabold text-white text-2xl'>$200 OFF</span> my normal price!
+          This deal won't last long! Normally this package goes for $699, thats <span className='font-extrabold text-white text-2xl'>$200 OFF</span> my normal price!
         </p>
       </div>
     </div>
@@ -199,9 +201,9 @@ export default function StandardPackage() {
                                     <span className="ml-3">bret@techbret.com</span>
                                 </dd>
                             </dl>
-                            <ul  className="mt-8 flex space-x-12">
+                            <ul className="mt-8 flex space-x-12">
                                 <li>
-                                    <a className="text-white hover:text-red-100" href="facebook.com">
+                                    <a className="text-white hover:text-red-100" href="https://www.facebook.com/techbret" rel="noreferrer" target="_blank">
                                         <span className="sr-only">Facebook</span>
                                         <svg
                                             width={24}
@@ -220,7 +222,7 @@ export default function StandardPackage() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="text-white hover:text-red-100" href="#">
+                                    <a className="text-white hover:text-red-100" href="https://github.com/techbret" rel="noreferrer" target="_blank">
                                         <span className="sr-only">GitHub</span>
                                         <svg
                                             width={24}
@@ -239,7 +241,7 @@ export default function StandardPackage() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="text-white hover:text-red-100" href="#">
+                                    <a className="text-white hover:text-red-100" href="https://twitter.com/tech_bret" rel="noreferrer" target="_blank">
                                         <span className="sr-only">Twitter</span>
                                         <svg
                                             width={24}
@@ -264,150 +266,7 @@ export default function StandardPackage() {
                         <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
                             <h3 className="text-5xl font-extrabold text-red-600 text-center">Get Started On Your Project</h3>
                             <h3 className="text-2xl font-semibold text-zinc-900 text-center">No Money Down Today! Fill out this form I can begin to put together your deal!</h3>
-                            <form action="#" method="POST" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-                                <div>
-                                    <label htmlFor="first-name" className="block text-sm font-medium text-zinc-900">
-                                        First name
-                                    </label>
-                                    <div className="mt-1">
-                                        <input
-                                            type="text"
-                                            name="first-name"
-                                            id="first-name"
-                                            autoComplete="given-name"
-                                            className="py-3 px-4 block w-full shadow-sm text-zinc-900 focus:ring-red-500 focus:border-red-500 border-zinc-300 rounded-md"
-                                        />
-                                    </div>
-                                </div>
-                                <div>
-                                    <label htmlFor="last-name" className="block text-sm font-medium text-zinc-900">
-                                        Last name
-                                    </label>
-                                    <div className="mt-1">
-                                        <input
-                                            type="text"
-                                            name="last-name"
-                                            id="last-name"
-                                            autoComplete="family-name"
-                                            className="py-3 px-4 block w-full shadow-sm text-zinc-900 focus:ring-red-500 focus:border-red-500 border-zinc-300 rounded-md"
-                                        />
-                                    </div>
-                                </div>
-                                <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-zinc-900">
-                                        Email
-                                    </label>
-                                    <div className="mt-1">
-                                        <input
-                                            id="email"
-                                            name="email"
-                                            type="email"
-                                            autoComplete="email"
-                                            className="py-3 px-4 block w-full shadow-sm text-zinc-900 focus:ring-red-500 focus:border-red-500 border-zinc-300 rounded-md"
-                                        />
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="flex justify-between">
-                                        <label htmlFor="phone" className="block text-sm font-medium text-zinc-900">
-                                            Phone
-                                        </label>
-                                        <span id="phone-optional" className="text-sm text-zinc-500">
-                                            Optional
-                                        </span>
-                                    </div>
-                                    <div className="mt-1">
-                                        <input
-                                            type="text"
-                                            name="phone"
-                                            id="phone"
-                                            autoComplete="tel"
-                                            className="py-3 px-4 block w-full shadow-sm text-zinc-900 focus:ring-red-500 focus:border-red-500 border-zinc-300 rounded-md"
-                                            aria-describedby="phone-optional"
-                                        />
-                                    </div>
-                                </div>                                
-                                <div>
-                                    <label htmlFor="first-name" className="block text-sm font-medium text-zinc-900">
-                                        Company Website
-                                    </label>
-                                    <div className="mt-1">
-                                        <input
-                                            type="text"
-                                            name="website"
-                                            id="website"
-                                            className="py-3 px-4 block w-full shadow-sm text-zinc-900 focus:ring-red-500 focus:border-red-500 border-zinc-300 rounded-md"
-                                        />
-                                    </div>
-                                </div>
-                                <div>
-                                    <label htmlFor="last-name" className="block text-sm font-medium text-zinc-900">
-                                        Company Industry
-                                    </label>
-                                    <div className="mt-1">
-                                        <input
-                                            type="text"
-                                            name="industry"
-                                            id="industry"
-                                            className="py-3 px-4 block w-full shadow-sm text-zinc-900 focus:ring-red-500 focus:border-red-500 border-zinc-300 rounded-md"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="sm:col-span-2">
-                                    <label htmlFor="subject" className="block text-sm font-medium text-zinc-900">
-                                        Company Name
-                                    </label>
-                                    <div className="mt-1">
-                                        <input
-                                            type="text"
-                                            name="company"
-                                            id="company"
-                                            className="py-3 px-4 block w-full shadow-sm text-zinc-900 focus:ring-red-500 focus:border-red-500 border-zinc-300 rounded-md"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="sm:col-span-2">
-                                    <label htmlFor="subject" className="block text-sm font-medium text-zinc-900">
-                                        Subject
-                                    </label>
-                                    <div className="mt-1">
-                                        <input
-                                            type="text"
-                                            name="subject"
-                                            id="subject"
-                                            className="py-3 px-4 block w-full shadow-sm text-zinc-900 focus:ring-red-500 focus:border-red-500 border-zinc-300 rounded-md"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="sm:col-span-2">
-                                    <div className="flex justify-between">
-                                        <label htmlFor="message" className="block text-sm font-medium text-zinc-900">
-                                            Tell Me About Your Project
-                                        </label>
-                                        <span id="message-max" className="text-sm text-zinc-500">
-                                            Max. 500 characters
-                                        </span>
-                                    </div>
-                                    <div className="mt-1">
-                                        <textarea
-                                            id="message"
-                                            name="message"
-                                            rows={20}
-                                            className="py-3 px-4 block w-full shadow-sm text-zinc-900 focus:ring-red-500 focus:border-red-500 border border-zinc-300 rounded-md"
-                                            aria-describedby="message-max"
-                                            defaultValue={''}
-                                        />
-                                    </div>
-                                </div>
-                                <div className="sm:col-span-2 sm:flex sm:justify-end">
-                                    <button
-                                        type="submit"
-                                        className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:w-auto"
-                                    >
-                                        Submit
-                                    </button>
-                                </div>
-                            </form>
+                           <CreateContact name={'StartUpDeal'} />
                         </div>
                     </div>
                 </div>
