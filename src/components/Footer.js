@@ -1,47 +1,35 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+import { addDoc, collection } from 'firebase/firestore';
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { db } from '../firebase';
+
 const navigation = {
     solutions: [
-      { name: 'Marketing', href: '#' },
-      { name: 'Social Media', href: '#' },
-      { name: 'Commerce', href: '#' },
-      { name: 'SEO', href: '#' },
+      { name: 'Marketing', href: '/contact' },
+      { name: 'Social Media', href: '/growth' },
+      { name: 'Ecommerce', href: '/ecommerce' },
+      { name: 'SEO', href: '/seo-package' },
     ],
     support: [
-      { name: 'Pricing', href: '#' },
-      { name: 'How it Works', href: '#' },
-      { name: 'Guides', href: '#' },
-      { name: 'Account', href: '#' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'How it Works', href: '/' },
+      { name: 'Account', href: '/admin' },
     ],
     company: [
-      { name: 'About', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Portfolio', href: '#' },
-      { name: 'Press', href: '#' },
+      { name: 'About', href: '/resume' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Portfolio', href: '/projects' },
+      { name: 'Press', href: '/news' },
     ],
     legal: [
-      { name: 'Claim', href: '#' },
-      { name: 'Privacy', href: '#' },
-      { name: 'Terms', href: '#' },
+      { name: 'Cancel Subscription', href: '/cancel' },
+      { name: 'Privacy', href: 'privacy' },
+      { name: 'Terms', href: 'terms' },
     ],
     social: [
       {
         name: 'Facebook',
-        href: '#',
+        href: 'https://www.facebook.com/techbret',
         icon: (props) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -54,7 +42,7 @@ const navigation = {
       },
       {
         name: 'Instagram',
-        href: '#',
+        href: 'https://www.instagram.com/techbret/',
         icon: (props) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -67,7 +55,7 @@ const navigation = {
       },
       {
         name: 'Twitter',
-        href: '#',
+        href: 'https://twitter.com/tech_bret',
         icon: (props) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -76,7 +64,7 @@ const navigation = {
       },
       {
         name: 'GitHub',
-        href: '#',
+        href: 'https://github.com/techbret',
         icon: (props) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -87,23 +75,30 @@ const navigation = {
           </svg>
         ),
       },
-      {
-        name: 'Dribbble',
-        href: '#',
-        icon: (props) => (
-          <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-            <path
-              fillRule="evenodd"
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-              clipRule="evenodd"
-            />
-          </svg>
-        ),
-      },
     ],
   }
   
   export default function Footer() {
+
+    const [subscriber, setSubscriber] = useState('');
+    const navigate = useNavigate();
+
+    function handleSubscribe(e) {
+      e.preventDefault();
+      try {
+        addDoc(collection(db, 'Subscriber'), {
+          subscriber: subscriber,
+        });
+        setSubscriber('')
+        navigate('/thank-you');
+      } catch(err) {
+        console.log(err);
+        alert('Im sorry there has been an error Please Call me at 7193184101 to resolve', err)
+      }
+    }
+
+
+
     return (
       <footer className="bg-zinc-800" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
@@ -115,24 +110,24 @@ const navigation = {
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 className="text-sm font-semibold text-zinc-400 tracking-wider uppercase">Solutions</h3>
-                  <ul role="list" className="mt-4 space-y-4">
+                  <ul className="mt-4 space-y-4">
                     {navigation.solutions.map((item) => (
                       <li key={item.name}>
-                        <a href={item.href} className="text-base text-zinc-300 hover:text-white">
+                        <Link to={item.href} className="text-base text-zinc-300 hover:text-white">
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
                   <h3 className="text-sm font-semibold text-zinc-400 tracking-wider uppercase">Support</h3>
-                  <ul role="list" className="mt-4 space-y-4">
+                  <ul className="mt-4 space-y-4">
                     {navigation.support.map((item) => (
                       <li key={item.name}>
-                        <a href={item.href} className="text-base text-zinc-300 hover:text-white">
+                        <Link to={item.href} className="text-base text-zinc-300 hover:text-white">
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -141,24 +136,24 @@ const navigation = {
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 className="text-sm font-semibold text-zinc-400 tracking-wider uppercase">Company</h3>
-                  <ul role="list" className="mt-4 space-y-4">
+                  <ul  className="mt-4 space-y-4">
                     {navigation.company.map((item) => (
                       <li key={item.name}>
-                        <a href={item.href} className="text-base text-zinc-300 hover:text-white">
+                        <Link to={item.href} className="text-base text-zinc-300 hover:text-white">
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
                   <h3 className="text-sm font-semibold text-zinc-400 tracking-wider uppercase">Legal</h3>
-                  <ul role="list" className="mt-4 space-y-4">
+                  <ul className="mt-4 space-y-4">
                     {navigation.legal.map((item) => (
                       <li key={item.name}>
-                        <a href={item.href} className="text-base text-zinc-300 hover:text-white">
+                        <Link to={item.href} className="text-base text-zinc-300 hover:text-white">
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -177,6 +172,8 @@ const navigation = {
                   Email address
                 </label>
                 <input
+                  onChange={e => setSubscriber(e.target.value)}
+                  value={subscriber}
                   type="email"
                   name="email-address"
                   id="email-address"
@@ -187,7 +184,8 @@ const navigation = {
                 />
                 <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                   <button
-                    type="submit"
+                    onClick={handleSubscribe}
+                    type="button"
                     className="w-full bg-red-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-800 focus:ring-red-500"
                   >
                     Subscribe
@@ -199,10 +197,10 @@ const navigation = {
           <div className="mt-8 border-t border-zinc-700 pt-8 md:flex md:items-center md:justify-between">
             <div className="flex space-x-6 md:order-2">
               {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-zinc-400 hover:text-red-600">
+                <Link key={item.name} to={item.href} className="text-zinc-400 hover:text-red-600">
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
+                </Link>
               ))}
             </div>
             <p className="mt-8 text-base text-zinc-400 md:mt-0 md:order-1">

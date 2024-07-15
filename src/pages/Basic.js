@@ -1,14 +1,12 @@
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import { CheckCircle } from 'heroicons-react'
-import CreateContact from '../modules/createContact';
+import CreateContact from '../modules/createContact'
 
 const packageFeatures = [
-    '6 Pages 100% Custom Website',
+    '3 Pages 100% Custom Website',
     'Complete Website Development',
     'Unlimited Revisions',
-    '6 Royalty-Free Stock Images',
     'Logo Design',
-    'Lead Capturing Form',
     'Complete W3C Certified HTML',
     'FREE Icon Design',
     'FREE Google Friendly Sitemap',
@@ -33,26 +31,23 @@ const monthlyFeatures = [
     'Revisions',
 ]
 
-const deal = "199Deal"
+const label = "Basic"
 
-export default function WebPackage() {
-    
-
-
+export default function Basic() {
     return (
         <div className="bg-zinc-800">
 
             <div>
-                <div className="mx-auto text-center py-16  sm:py-20 sm:px-6 ">
-                    <h2 className="text-6xl font-extrabold text-white">
-                        <span className="block mb-4">$199 <span className='text-red-600'>Summer Deal</span></span>
-                    </h2>
-                    <h2 className="text-xl font-bold text-white block">New Website with my Content Management Service for only $79/month</h2>
-                    <p className="mt-4 text-lg leading-6 text-zinc-200">
-                        This deal won't last long! Normally this package goes for $499, thats <span className='font-extrabold text-white text-2xl'>$200 OFF</span> my normal price!
-                    </p>
-                </div>
-            </div>
+      <div className="mx-auto text-center py-16  sm:py-20 sm:px-6 ">
+        <h2 className="text-6xl font-extrabold text-white">
+          <span className="block mb-4">$299 <span className='text-red-600'>Basic Starter Deal</span></span>          
+        </h2>
+        <h2 className="text-xl font-bold text-white block">Content Management Starting for only $79/month <span className='text-sm'>Optional</span></h2>
+        <p className="mt-4 text-lg leading-6 text-zinc-200">
+          This deal won't last long! Normally this package goes for $499, thats <span className='font-extrabold text-white text-2xl'>$200 OFF</span> my normal price!
+        </p>
+      </div>
+    </div>
             <div className="max-w-7xl mx-auto">
                 <div className="relative bg-white shadow-xl rounded-lg">
                     <h2 className="sr-only">Contact us</h2>
@@ -156,8 +151,8 @@ export default function WebPackage() {
                                     </defs>
                                 </svg>
                             </div>
-
-                            <h3 className="text-3xl font-extrabold text-white">What's Included</h3>
+                            
+                            <h3 className="text-3xl font-extrabold text-white">What's Included</h3>                   
 
                             <div className="flex-1 flex flex-col justify-between mt-6 border-zinc-100 bg-red-700">
                                 <ul className="space-y-4">
@@ -173,17 +168,18 @@ export default function WebPackage() {
                             </div>
                             <br></br>
                             <div className='rounded-lg border-4 border-white border-solid bg-zinc-600 mt-3'>
-                                <h3 className="text-xl font-extrabold ium text-white mt-6 text-center">$79/month Content Management</h3>
+                            <h3 className='text-sm font-extrabold ium text-white mt-6 text-center'>Optional</h3> 
+                            <h3 className="text-xl font-extrabold ium text-white text-center">$79/month Content Management </h3>
 
-                                <div className="flex-1 flex flex-col justify-between border-zinc-100  p-8">
-                                    <ul className="space-y-2">
-                                        {monthlyFeatures.map((feature) => (
-                                            <li key={feature} className="flex items-start">
-                                                <p className="text-base font-medium text-white">{feature}</p>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
+                            <div className="flex-1 flex flex-col justify-between border-zinc-100  p-8">
+                                <ul  className="space-y-2">
+                                    {monthlyFeatures.map((feature) => (
+                                        <li key={feature} className="flex items-start">
+                                            <p className="text-base font-medium text-white">{feature}</p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
 
                             </div>
 
@@ -204,7 +200,7 @@ export default function WebPackage() {
                                     <span className="ml-3">bret@techbret.com</span>
                                 </dd>
                             </dl>
-                            <ul className="mt-8 flex space-x-12">
+                            <ul  className="mt-8 flex space-x-12">
                                 <li>
                                     <a className="text-white hover:text-red-100" href="https://www.facebook.com/techbret" rel="noreferrer" target="_blank">
                                         <span className="sr-only">Facebook</span>
@@ -269,7 +265,7 @@ export default function WebPackage() {
                         <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
                             <h3 className="text-5xl font-extrabold text-red-600 text-center">Get Started On Your Project</h3>
                             <h3 className="text-2xl font-semibold text-zinc-900 text-center">No Money Down Today! Fill out this form I can begin to put together your deal!</h3>
-                           <CreateContact name={deal} />
+                            <CreateContact name={label} />
                         </div>
                     </div>
                 </div>

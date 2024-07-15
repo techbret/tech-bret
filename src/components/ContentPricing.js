@@ -1,15 +1,37 @@
 import { CheckIcon } from '@heroicons/react/outline'
+import { Link } from 'react-router-dom'
 
-const hobbyFeatures = ['1-on-1 meetings once a month', 'Client Requested Content Updates', 'Daily  Off-Site Backup of Full Website']
-const scaleFeatures = ['1-on-1 meetings twice a month', 'E-Commerce Sites ', 'E-Commerce']
+const hobbyFeatures = [
+  'Extension and Theme update',
+  'Extension Installation',
+  'Cloud Backups (1 Daily)',
+  'Monthly 1-on-1',
+  'General Tech',
+  'Google Analytics Intigration',
+  'Hosting'
+]
+const scaleFeatures = [
+  '24/7 Priority Support',
+  'Unlimited 24/7 Website Edits',
+  'Development & designing',
+  'Performance optimization',
+  'Malware Investigations',
+  'Firewall Setup and DDoS protection',
+  'My SEO Package',
+  'Ecommerce Customizable',]
 const growthFeatures = [
-  '1',
-  '2',
-  '3',
-  '4',
-  'Review and Perform Software/Plugin Updates Daily',
-  'Uptime & Security Monitoring',
-  'Performance Optimization',
+    '4 Hours development & designing',
+    'Development & designing',
+    'Speed and Performance optimization',
+    'Malware Scans and Investigations',
+    'Google Site Map and Local Listing Submission',
+    'Customizations',
+    'Firewall Setup and DDoS protection',
+    'Google Business Maintenance',
+    'My SEO Package',
+    'Ecommerce Customizable',
+    'Email Account Administrator',
+    'Cancel Anytime'
 ]
 
 export default function ContentPricing() {
@@ -50,11 +72,11 @@ export default function ContentPricing() {
                       </div>
                     </div>
                     <div className="flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
-                      <ul role="list" className="space-y-4">
+                      <ul className="space-y-1">
                         {hobbyFeatures.map((feature) => (
                           <li key={feature} className="flex items-start">
                             <div className="flex-shrink-0">
-                              <CheckIcon className="flex-shrink-0 h-6 w-6 text-green-500" aria-hidden="true" />
+                              <CheckIcon className="flex-shrink-0 h-6 w-6 text-red-600" aria-hidden="true" />
                             </div>
                             <p className="ml-3 text-base font-medium text-gray-500">{feature}</p>
                           </li>
@@ -62,13 +84,13 @@ export default function ContentPricing() {
                       </ul>
                       <div className="mt-8">
                         <div className="rounded-lg shadow-md">
-                          <a
-                            href="#"
+                          <Link
+                            to="/hobby"
                             className="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-red-600 hover:bg-gray-50"
                             aria-describedby="tier-hobby"
                           >
                             Get Started
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -103,11 +125,11 @@ export default function ContentPricing() {
                     </div>
                   </div>
                   <div className="border-t-2 border-gray-100 rounded-b-lg pt-10 pb-8 px-6 bg-gray-50 sm:px-10 sm:py-10">
-                    <ul role="list" className="space-y-4">
+                    <ul className="space-y-1">
                       {growthFeatures.map((feature) => (
                         <li key={feature} className="flex items-start">
                           <div className="flex-shrink-0">
-                            <CheckIcon className="flex-shrink-0 h-6 w-6 text-green-500" aria-hidden="true" />
+                            <CheckIcon className="flex-shrink-0 h-6 w-6 text-red-600" aria-hidden="true" />
                           </div>
                           <p className="ml-3 text-base font-medium text-gray-500">{feature}</p>
                         </li>
@@ -115,13 +137,13 @@ export default function ContentPricing() {
                     </ul>
                     <div className="mt-10">
                       <div className="rounded-lg shadow-md">
-                        <a
-                          href="#"
+                        <Link
+                          to="/growth"
                           className="block w-full text-center rounded-lg border border-transparent bg-red-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-red-700"
                           aria-describedby="tier-growth"
                         >
                           Get Started
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -145,11 +167,11 @@ export default function ContentPricing() {
                       </div>
                     </div>
                     <div className="flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
-                      <ul role="list" className="space-y-4">
+                      <ul className="space-y-1">
                         {scaleFeatures.map((feature) => (
                           <li key={feature} className="flex items-start">
                             <div className="flex-shrink-0">
-                              <CheckIcon className="flex-shrink-0 h-6 w-6 text-green-500" aria-hidden="true" />
+                              <CheckIcon className="flex-shrink-0 h-6 w-6 text-red-600" aria-hidden="true" />
                             </div>
                             <p className="ml-3 text-base font-medium text-gray-500">{feature}</p>
                           </li>
@@ -157,13 +179,13 @@ export default function ContentPricing() {
                       </ul>
                       <div className="mt-8">
                         <div className="rounded-lg shadow-md">
-                          <a
-                            href="#"
+                          <Link
+                            to="/scale"
                             className="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-red-600 hover:bg-gray-50"
                             aria-describedby="tier-scale"
                           >
                             Get Started
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>

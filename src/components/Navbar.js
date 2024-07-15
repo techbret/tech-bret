@@ -12,7 +12,7 @@ const user = {
 }
 const navigation = [
   { name: 'Home', href: '/', current: false },
-  { name: 'Progress', href: '/progress', current: false },  
+  { name: 'Portfolio', href: '/projects', current: false },  
   { name: 'Pricing', href: '/pricing', current: false },
   { name: 'Contact', href: '/contact', current: false },
   { name: 'My Resume', href: '/resume', current: false },
@@ -143,8 +143,8 @@ export default function Navbar(props) {
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
-                  href={item.href}
+                  as={Link}
+                  to={item.href}
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
